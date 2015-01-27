@@ -18,7 +18,7 @@ script:
   - git config --global push.default simple
   - git clone https://github.com/Carreau/nikola-blog blog
   - git clone https://github.com/Carreau/carreau.github.io blog/output
-  - ln -s . blog/posts
+  - ln -s .. blog/posts
   - cd blog
   - pwd
   - nikola build
