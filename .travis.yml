@@ -46,7 +46,7 @@ after_success:
     echo '================'
     git add .
     echo '================'
-    git commit -am'autocommit autobuild"
+    git commit -am'autocommit autobuild'
     echo '================'
     git status
     echo '================'
