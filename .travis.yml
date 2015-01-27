@@ -20,6 +20,7 @@ script:
   - git clone https://github.com/Carreau/carreau.github.io blog/output
   - ln -s . blog/posts
   - cd blog
+  - pwd
   - nikola build
 
 after_success:
