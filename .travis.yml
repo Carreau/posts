@@ -27,13 +27,15 @@ script:
 after_success:
   |
   if [[ $TRAVIS_PULL_REQUEST == false && $TRAVIS_BRANCH == 'master' ]]; then
+    
     echo "Will push to ghpages"
     pwd
+    cd ../posts
     openssl aes-256-cbc -K $encrypted_b04f054e19e0_key -iv $encrypted_b04f054e19e0_iv -in .travis/travis_rsa.enc -out .travis/travis_rsa -d
     eval `ssh-agent -s`
     chmod 600 .travis/travis_rsa
     ssh-add .travis/travis_rsa
-    cd blog/outputs
+    cd ../blog/outputs
     git remote add ghpages ssh://github.com/Carreau/carreau.github.io
     pwd
     git remote -v
