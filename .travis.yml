@@ -6,10 +6,10 @@ matrix:
     - python: 3.4
 
 install:
-  - # pip install -e git+https://github.com/ipython/ipython.git#egg=IPython
-  - # pip install nikola
-  - # pip install mistune jsonschema jsonpointer
-  - # pip install jinja2
+  - pip install -e git+https://github.com/ipython/ipython.git#egg=IPython
+  - pip install nikola
+  - pip install mistune jsonschema jsonpointer
+  - pip install jinja2
 
 
 script:
@@ -22,7 +22,7 @@ script:
   - ln -s posts blog/posts
   - cd blog
   - pwd
-  - # nikola build
+  - nikola build
 
 after_success:
   |
@@ -35,13 +35,21 @@ after_success:
     eval `ssh-agent -s`
     chmod 600 .travis/travis_rsa
     ssh-add .travis/travis_rsa
-    ls .
-    ls ..
-    ls ../blog
-    cd ../blog/outputs
+    cd ../blog/output
     git remote add ghpages ssh://github.com/Carreau/carreau.github.io
+    echo '================'
     pwd
+    echo '================'
     git remote -v
+    echo '================'
+    git status
+    echo '================'
+    git add .
+    echo '================'
+    git commit -am'autocommit autobuild"
+    echo '================'
+    git status
+    echo '================'
     echo "shoudl i push?"
     #git push ghpages master:master
   else
