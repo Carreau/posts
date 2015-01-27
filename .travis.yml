@@ -35,6 +35,9 @@ after_success:
     eval `ssh-agent -s`
     chmod 600 .travis/travis_rsa
     ssh-add .travis/travis_rsa
+    ls .
+    ls ..
+    ls ../blog
     cd ../blog/outputs
     git remote add ghpages ssh://github.com/Carreau/carreau.github.io
     pwd
