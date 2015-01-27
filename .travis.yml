@@ -50,6 +50,9 @@ after_success:
     echo '================'
     git status
     echo '================'
+    ls -la posts
+    echo '================'
+    ls output/2015/
     echo "should I push?"
     git push ghpages master:master
   else
