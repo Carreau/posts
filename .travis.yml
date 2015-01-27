@@ -50,8 +50,8 @@ after_success:
     echo '================'
     git status
     echo '================'
-    echo "shoudl i push?"
-    #git push ghpages master:master
+    echo "should I push?"
+    git push ghpages master:master
   else
     echo "Will only deploy docs build from blog from master branch"
   fi
