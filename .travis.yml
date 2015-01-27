@@ -6,7 +6,7 @@ matrix:
     - python: 3.4
 
 install:
-  - pip install git+https://github.com/ipython/ipython.git
+    - pip install -e git+https://github.com/ipython/ipython.git#egg=IPython
   - pip install nikola
   - pip install mistune jsonschema jsonpointer
   - pip install jinja2
