@@ -16,8 +16,8 @@ script:
   - git config --global user.email "TravisBot@nomail"
   - git config --global user.name "TravisBot"
   - git config --global push.default simple
-  - git clone ssh://github/Carreau/nikola-blog blog
-  - git clone ssh://github/carreau/carreau.github.io blog/output
+  - git clone https://github.com/Carreau/nikola-blog blog
+  - git clone https://github.com/Carreau/carreau.github.io blog/output
   - ln -s . blog/posts
   - cd blog
   - nikola build
