@@ -19,7 +19,7 @@ script:
   - cd ..
   - git clone https://github.com/Carreau/nikola-blog blog
   - git clone https://github.com/Carreau/carreau.github.io blog/output
-  - ln -s posts blog/posts
+  - ln -s ../posts blog/posts
   - cd blog
   - pwd
   - ls -la posts
@@ -50,6 +50,8 @@ after_success:
     git add .
     echo '================'
     git commit -am'autocommit autobuild'
+    echo '================'
+    git diff --stat
     echo '================'
     git status
     echo '================'
