@@ -28,13 +28,17 @@ after_success:
   |
   if [[ $TRAVIS_PULL_REQUEST == false && $TRAVIS_BRANCH == 'master' ]]; then
     echo "Will push to ghpages"
-    # shoudl decrypt ssh key
-    #openssl aes-256-cbc -K $encrypted_7d2843e800b0_key -iv $encrypted_7d2843e800b0_iv -in .travis/travis_id_rsa_2048.enc -out .travis/travis_id_rsa_2048 -d
-    #eval `ssh-agent -s`
-    #chmod 600 .travis/travis_id_rsa_2048
-    #ssh-add .travis/travis_id_rsa_2048
-    #cd gh-pages
-    #git push ghpages
+    pwd
+    openssl aes-256-cbc -K $encrypted_b04f054e19e0_key -iv $encrypted_b04f054e19e0_iv -in .travis/travis_rsa.enc -out .travis/travis_rsa -d
+    eval `ssh-agent -s`
+    chmod 600 .travis/travis_rsa
+    ssh-add .travis/travis_rsa
+    cd blog/outputs
+    git remote add ghpages ssh://github.com/Carreau/carreau.github.io
+    pwd
+    git remote -v
+    echo "shoudl i push?"
+    #git push ghpages master:master
   else
     echo "Will only deploy docs build from blog from master branch"
   fi
