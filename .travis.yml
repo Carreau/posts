@@ -16,9 +16,10 @@ script:
   - git config --global user.email "TravisBot@nomail"
   - git config --global user.name "TravisBot"
   - git config --global push.default simple
+  - cd ..
   - git clone https://github.com/Carreau/nikola-blog blog
   - git clone https://github.com/Carreau/carreau.github.io blog/output
-  - ln -s .. blog/posts
+  - ln -s posts blog/posts
   - cd blog
   - pwd
   - nikola build
