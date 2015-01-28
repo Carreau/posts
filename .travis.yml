@@ -39,7 +39,7 @@ after_success:
     chmod 600 .travis/travis_rsa
     ssh-add .travis/travis_rsa
     cd ../blog/output
-    git remote add ghpages ssh://github.com/Carreau/carreau.github.io
+    git remote add ghpages ssh://git@github.com/Carreau/carreau.github.io
     echo '================'
     pwd
     echo '================'
