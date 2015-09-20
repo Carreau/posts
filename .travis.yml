@@ -6,10 +6,7 @@ matrix:
     - python: 3.4
 
 install:
-  - pip install -e git+https://github.com/ipython/ipython.git#egg=IPython
-  - pip install -e git+https://github.com/getnikola/nikola.git#egg=nikola
-  - pip install mistune jsonschema jsonpointer
-  - pip install jinja2
+  - pip install jupyter nikola
 
 
 script:
@@ -59,7 +56,7 @@ after_success:
     echo '================'
     ls 2015/
     echo "should I push?"
-    git push ghpages master:master
+    git push ghpages master:test
   else
-    echo "Will only deploy docs build from blog from master branch"
+    echo "Will only deploy docs build to blog from master branch"
   fi
