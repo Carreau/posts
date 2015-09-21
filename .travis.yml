@@ -6,7 +6,7 @@ matrix:
     - python: 3.4
 
 install:
-  - pip install jupyter nikola
+  - pip install jupyter nikola markdown
 
 
 script:
@@ -56,7 +56,7 @@ after_success:
     echo '================'
     ls 2015/
     echo "should I push?"
-    git push ghpages master:test
+    git push ghpages master:master
   else
     echo "Will only deploy docs build to blog from master branch"
   fi
