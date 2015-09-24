@@ -1,11 +1,11 @@
-<!-- 
+<!--
 .. title: Planning an early death for Python 2
 .. slug: planning-an-early-death-for-python-2
 .. date: 2015-09-24 10:00:00 UTC
 .. tags: python, draft
 .. category:
-.. link: 
-.. description: 
+.. link:
+.. description:
 .. type: text
 -->
 
@@ -16,14 +16,14 @@ can do.
 
 Despite having mostly Python developers, the workshop was welcoming for
 developer of other communities like C, C++, Julia, R, etc.. as one of the goal
-was to improve cross language operability. 
+was to improve cross language operability.
 
 One of the things that though is still holding back datascience and the advance
 of the tooling around it in the Python community is the old code which are
 still requiring Legacy Python 2.7 . We thus decided hod a small working group
 to plan a early death for Legacy Python.
 
-## move over Legacy Python once and for all. 
+## Move over Legacy Python once and for all.
 
 In collaboration with many developers among @jiffyclub, @tacasswell, @kbarbary,
 @teoliphant, @pzwang, @ogrisel, we discussed different options to push Legacy
@@ -37,20 +37,20 @@ transition at that point.
 
 So what are the step we can do to push the transition forward.
 
-## Choose your words. 
+## Choose your words.
 
 The choice of words you make on the internet and in real life will influence
 the vision people have for Legacy Python vs Python. Assume that Python 3 is
 just Python, and refer to Python 2 as legacy python.  IDEs and TwitterSphere is
 [starting](https://twitter.com/astrofrog/status/646976176657932288) to [do
 that](https://twitter.com/almarklein/status/645542438937980929), join the
-movement. 
+movement.
 
 Refer to Legacy Python in the past tense. It will reinforce the old and
 deprecated state of Legacy Python. I still don't understand why people would
 like to stay with a language which that many defects:
 
-  - it did not protect you from mixing Unicode and bytes, 
+  - it did not protect you from mixing Unicode and bytes,
   - tripped you with integer division
   - did not allow you to replace the printing function
   - had a range object which is not memory efficient
@@ -93,7 +93,7 @@ your users are using Python 3, this will make writing documentation much easier
 to get right.
 
 
-### Ask user to reproduce but on up-to-date Python version. 
+### Ask user to reproduce but on up-to-date Python version.
 
 Have you ever had a bug report where you ask users to upgrade your libraries
 dependencies ? Do the same with Python. If a user make a bug report with Python
@@ -111,8 +111,8 @@ for Python 2.6, and that's what you can do for Legacy Python fix only. If you
 have a sufficient number of user which are asking for 2.7 support, accept the
 bug report, but as an open source maintainer do not work on it. You can partner
 with companies like Continuum or Enthought, from which user would "buy" 2.7 support
-for your libraries, in exchange of which the Companies could spend some of their 
-developer time fixing your Legacy Python bugs. 
+for your libraries, in exchange of which the Companies could spend some of their
+developer time fixing your Legacy Python bugs.
 
 After a quick discussion with Peter Wang, it would be possible, but details
 need to be worked on.
@@ -125,7 +125,7 @@ need to be worked on.
 Plan you new features explicitly for Python 3, even if the feature would be
 simple to make Legacy Python compatible, disable it on old platforms, and issue
 a warning indicating that the feature is not available on Legacy Python
-install. 
+install.
 
 You will be able to use all the shiny Python features which are lacking on Legacy Python
 like Unicode characters!
@@ -148,11 +148,11 @@ and new project to push forward the adoption of Python.
 
 Make sure that all the project you care about have continuous integration on
 Python 3, if possible even the documentation building done with Python 3, help
-to make Python 3 the default. 
+to make Python 3 the default.
 
 With continuous integration, check that your favorites projects are tested on
 Python Nightly, most CI provider allow the tests to be ran on nightly, but do
-not make the status of the project turn red if the test are failing. See 
+not make the status of the project turn red if the test are failing. See
 [`allow_faillure`](http://docs.travis-ci.com/user/customizing-the-build/#Rows-that-are-Allowed-to-Fail)
 on Travis-CI for example.
 
@@ -160,11 +160,11 @@ on Travis-CI for example.
 
 The path to migrate C-extension is not well documented, the preferred approach
 is to use CFFI, but there is still alack of well written centralised, document
-on how to integrate with Python 3. IF you are knowledgeable on this domain, your help is welcomed. 
+on how to integrate with Python 3. IF you are knowledgeable on this domain, your help is welcomed.
 
 
 
-## the things we will (probably) not do. 
+## The things we will (probably) not do.
 
 Make a twitter account that shame people that use Legacy Python, though we
 might do a Parody account which say funny things, and push people toward Python 3.
@@ -204,7 +204,7 @@ stay with IE6, and is voting for Donald Trump.
 
 
 As usual my English is far from perfect, so Pull Request welcomed on this blog
-post. 
+post.
 
 
 
