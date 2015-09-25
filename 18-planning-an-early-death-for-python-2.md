@@ -23,7 +23,7 @@ would enable easier interaction with other programming languages.
 
 Out of the discussion arose a topic that has long plagued the python community
 at large: code that requires legacy Python 2.7 is holding back the development
-data-science toolsets and – by extension – the progress of data science as a
+of data-science toolsets and – by extension – the progress of data science as a
 whole. Python 2.7 was an important part of the history of scientific computing,
 but now it should be left as part of that history. Thus, we convened a small
 working group to plan a early death for Legacy Python.
