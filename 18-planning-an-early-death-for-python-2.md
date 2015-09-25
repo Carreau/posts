@@ -2,28 +2,41 @@
 .. title: Planning an Early Death for Python 2
 .. slug: planning-an-early-death-for-python-2
 .. date: 2015-09-24 10:00:00 UTC
-.. tags: python, draft
+.. tags: python
 .. category:
 .. link:
 .. description:
 .. type: text
 -->
 
-On September 18 and 19, 2015, the Data Structure for Data Science workshop gathered at UC Berkeley's BIDS[Berkeley Institute for Data Science]. It was a productive two days of presentation, discussion and working groups — a collaborative effort aimed at expanding what data science can do.
+On September 18 and 19, 2015, the Data Structure for Data Science workshop
+gathered at UC Berkeley's BIDS [Berkeley Institute for Data Science]. It was a
+productive two days of presentation, discussion and working groups — a
+collaborative effort aimed at expanding what data science can do.
 
-Despite having mostly Python developers, the workshop reached out and included members from many other programming communities (e.g., C, C++, Julia, R, etc.) as the workshop's explicit goal was to improve cross language operability. In particular, the goal was to enable python's scientific computing tools (numpy,scipy,pandas, etc.) to have a consensus backbone data-structure that would enable easier interaction with other programming languages. 
+Despite having mostly Python developers, the workshop reached out and included
+members from many other programming communities (e.g., C, C++, Julia, R, etc.)
+as the workshop's explicit goal was to improve cross language operability. In
+particular, the goal was to enable python's scientific computing tools
+(numpy, scipy, pandas, etc.) to have a consensus backbone data-structure that
+would enable easier interaction with other programming languages.
 
-Out of the discussion arose a topic that has long plagued the python community at large: code that requires legacy Python 2.7 is holding back the development data-science toolsets and – by extension – the progress of data science as a whole. Python 2.7 was an important part of the history of scientific computing, but now it should be left as part of that history. Thus, we convened a small working group to plan a early death for Legacy Python.
+Out of the discussion arose a topic that has long plagued the python community
+at large: code that requires legacy Python 2.7 is holding back the development
+data-science toolsets and – by extension – the progress of data science as a
+whole. Python 2.7 was an important part of the history of scientific computing,
+but now it should be left as part of that history. Thus, we convened a small
+working group to plan a early death for Legacy Python.
 
 ## Move over Legacy Python once and for all.
 
-In collaboration with many developers among @jiffyclub, @tacasswell, @kbarbary,
-@teoliphant, @pzwang, @ogrisel, we discussed different options to push Legacy
-Python more or less gently through the door. We understand
-that some people are still requiring the use of Legacy Python in their code
-base, or require some libraries which are still only available on Legacy Python
-and don't blame them.  We understand that Legacy Python was a great language
-and that it's hard to move over it.  Though the retirement of Legacy Python is
+In collaboration with many developers among whom @jiffyclub, @tacasswell,
+@kbarbary, @teoliphant, @pzwang, @ogrisel, we discussed different options to
+push Legacy Python more or less gently through the door. We understand that
+some people are still requiring the use of Legacy Python in their code base, or
+the use some libraries which are still only available on Legacy Python and we
+don't blame them.  We understand that Legacy Python was a great language and
+that it's hard to move over it.  Though the retirement of Legacy Python is
 2020, you will ave to make the transition then, and it will be even harder to
 transition at that point.
 
@@ -74,6 +87,10 @@ software on Legacy Python, and spend lot of time making your codebase
 compatible with both Python 3 and legacy Python.  There are a few step you can
 take to push user toward Python 3.
 
+If a user is not willing to update to a new version on Python, and decide to stay on
+legacy Python, they can most likely pin the version on your library to versions which
+support Legacy Python.
+
 ### Make your examples/documentation Python 3 only
 
 Or at least do not make effort to have examples that work using Legacy Python.
@@ -81,9 +98,8 @@ Sprinkle with function annotation, and `async`/`await` keyword can help with
 communicating your example are Python 3 only.
 
 You can even avoid mention of Legacy Python in your documentation and assume
-your users are using Python 3, this will make writing documentation much easier
-to get right.
-
+your users are using Python 3, this will make writing documentation much easier,
+and increase the chances to get examples right.
 
 ### Ask user to reproduce but on up-to-date Python version.
 
@@ -92,14 +108,15 @@ dependencies ? Do the same with Python. If a user make a bug report with Python
 2.7 ask them if they can reproduce with an up-to date version of Python, even
 if the bug is obviously from your side.  If they really can't upgrade they will
 know, if they do and can reproduce, then you'll have at least converted one
-user from Legacy Python (and in the meantime you might have already corrected the bug).
+user from Legacy Python (and in the meantime you might have already corrected
+the bug).
 
 
 ### Defer 2.7 support to companies like Continuum
 
-This is already what some [Nick Coghlan
+This is already what [Nick Coghlan
 recommands](http://www.curiousefficiency.org/posts/2015/04/stop-supporting-python26.html)
-for Python 2.6, and that's what you can do for Legacy Python fix only. If you
+for Python 2.6, and that's what you can do for Legacy Python fix. If you
 have a sufficient number of user which are asking for 2.7 support, accept the
 bug report, but as an open source maintainer do not work on it. You can partner
 with companies like Continuum or Enthought, from which user would "buy" 2.7 support
@@ -119,8 +136,8 @@ simple to make Legacy Python compatible, disable it on old platforms, and issue
 a warning indicating that the feature is not available on Legacy Python
 install.
 
-You will be able to use all the shiny Python features which are lacking on Legacy Python
-like Unicode characters!
+You will be able to use all the shiny Python features which are lacking on
+Legacy Python like Unicode characters !
 
 ### Create new Python packages
 
@@ -151,9 +168,9 @@ on Travis-CI for example.
 ### Porting C-extensions, move to Cython
 
 The path to migrate C-extension is not well documented, the preferred approach
-is to use CFFI, but there is still alack of well written centralised, document
-on how to integrate with Python 3. IF you are knowledgeable on this domain, your help is welcomed.
-
+is to use [CFFI](https://cffi.readthedocs.org/en/latest/), but there is still
+alack of well written centralised, document on how to integrate with Python 3.
+IF you are knowledgeable on this domain, your help is welcomed.
 
 
 ## The things we will (probably) not do.
@@ -194,9 +211,11 @@ and release nightly ?
 Remember, Legacy Python is responsible for global warming, encourage people to
 stay with IE6, and is voting for Donald Trump.
 
+If you have any ideas, please send me a Pull Request, I'll be happy to discuss. 
 
 As usual my English is far from perfect, so Pull Request welcomed on this blog
-post.
+post. Thanks to @michaelpacer who already did some rereading/rephrasing of
+first draft.
 
 
 
