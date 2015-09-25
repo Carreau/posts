@@ -13,7 +13,7 @@ On September 18 and 19, 2015, the Data Structure for Data Science workshop gathe
 
 Despite having mostly Python developers, the workshop reached out and included members from many other programming communities (e.g., C, C++, Julia, R, etc.) as the workshop's explicit goal was to improve cross language operability. In particular, the goal was to enable python's scientific computing tools (numpy,scipy,pandas, etc.) to have a consensus backbone data-structure that would enable easier interaction with other programming languages. 
 
-Out of the discussion arose a topic that has long plagued the python community at large: code that requires legacy Python 2.7 is holding back the development data-science toolsets and – by extension – the progress of data science as a whole. Python 2.7 was an important part of the history of scientific computing, but now it should be left as part of that history. Thus, we convened a small working group to plan a early death for Legacy Python.
+Out of the discussion arose a topic that has long plagued the python community at large: code that requires legacy Python 2.7 is holding back the development of data-science toolsets and – by extension – the progress of data science as a whole. Python 2.7 was an important part of the history of scientific computing, but now it should be left as part of that history. Thus, we convened a small working group to plan a early death for Legacy Python.
 
 ## Move over Legacy Python once and for all.
 
