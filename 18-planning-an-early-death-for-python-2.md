@@ -1,5 +1,5 @@
 <!--
-.. title: Planning an early death for Python 2
+.. title: Planning an Early Death for Python 2
 .. slug: planning-an-early-death-for-python-2
 .. date: 2015-09-24 10:00:00 UTC
 .. tags: python, draft
@@ -9,19 +9,11 @@
 .. type: text
 -->
 
-Last Friday and Saturday the Data Structure for Data Science workshop was
-happening at UC Berkeley BIDS. It was a productive two days of presentation,
-discussion and working groups to push the bleeding edge of what data science
-can do.
+On September 18 and 19, 2015, the Data Structure for Data Science workshop gathered at UC Berkeley's BIDS[Berkeley Institute for Data Science]. It was a productive two days of presentation, discussion and working groups — a collaborative effort aimed at expanding what data science can do.
 
-Despite having mostly Python developers, the workshop was welcoming for
-developer of other communities like C, C++, Julia, R, etc.. as one of the goal
-was to improve cross language operability.
+Despite having mostly Python developers, the workshop reached out and included members from many other programming communities (e.g., C, C++, Julia, R, etc.) as the workshop's explicit goal was to improve cross language operability. In particular, the goal was to enable python's scientific computing tools (numpy,scipy,pandas, etc.) to have a consensus backbone data-structure that would enable easier interaction with other programming languages. 
 
-One of the things that though is still holding back datascience and the advance
-of the tooling around it in the Python community is the old code which are
-still requiring Legacy Python 2.7 . We thus decided hod a small working group
-to plan a early death for Legacy Python.
+Out of the discussion arose a topic that has long plagued the python community at large: code that requires legacy Python 2.7 is holding back the development data-science toolsets and – by extension – the progress of data science as a whole. Python 2.7 was an important part of the history of scientific computing, but now it should be left as part of that history. Thus, we convened a small working group to plan a early death for Legacy Python.
 
 ## Move over Legacy Python once and for all.
 
