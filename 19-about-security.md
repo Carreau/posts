@@ -2,7 +2,7 @@
 .. title: About security
 .. slug: 19-about-security
 .. date: 2015-09-24 21:33:24 UTC
-.. tags: figshare, security, anger, privacy, swearwords, draft
+.. tags: figshare, security, anger, privacy, swearwords
 .. category: 
 .. link: 
 .. description: You are wrong about security.
