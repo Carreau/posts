@@ -12,11 +12,16 @@
 
 Edit October 3: 
 
-This post have received significant updates from [Michael
-Pacer](https://github.com/Carreau/posts/commit/0f323f479a134eb4d500f89d6f2434d6019d8245)
-which I partially [merged manually](), removing what I think was denaturating
-the content of the post. You can still see the original version in the [git
-history]()
+This post have received significant updates from 
+[Michael Pacer](https://github.com/Carreau/posts/commit/0f323f479a134eb4d500f89d6f2434d6019d8245)
+which I partially
+[merged manually](https://github.com/Carreau/posts/commit/7bcb0d98efd08bd063418f2bb43a0511fc1f88a2),
+removing what I think was denaturating the content of the post. You can still
+see the original version in the
+[git history](https://github.com/Carreau/posts/blob/83db13ddfba3c36041d254a4e7c4d6996feef7a4/18-planning-an-early-death-for-python-2.md)
+and the 
+[rich visual diff](https://github.com/Carreau/posts/commit/7bcb0d98efd08bd063418f2bb43a0511fc1f88a2?short_path=6bdf4ca#diff-6bdf4ca1c566a2d428f044cb49e44dc7)
+.
 
 On September 18 and 19, 2015, the Data Structure for Data Science workshop
 gathered at UC Berkeley's BIDS [Berkeley Institute for Data Science]. It was a
