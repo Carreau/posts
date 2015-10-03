@@ -1,6 +1,6 @@
 <!--
-.. title: Planning an Early Death for Python 2
-.. slug: planning-an-early-death-for-python-2
+.. title: Planning an Early Death for (~~Python 2~~) Legacy Python 
+.. slug: planning-an-early-death-for-legacy-python
 .. date: 2015-09-24 10:00:00 UTC
 .. tags: python
 .. category:
@@ -30,66 +30,58 @@ working group to plan a early death for Legacy Python.
 
 ## Move over Legacy Python once and for all.
 
-In collaboration with many developers among whom @jiffyclub, @tacasswell,
-@kbarbary, @teoliphant, @pzwang, @ogrisel, we discussed different options to
-push Legacy Python more or less gently through the door. We understand that
-some people are still requiring the use of Legacy Python in their code base, or
-the use some libraries which are still only available on Legacy Python and we
-don't blame them.  We understand that Legacy Python was a great language and
-that it's hard to move over it.  Though the retirement of Legacy Python is
-2020, you will ave to make the transition then, and it will be even harder to
-transition at that point.
+Together @jiffyclub, @tacasswell,
+@kbarbary, @teoliphant, @pzwang, @ogrisel and I (@carreau) discussed different options to push Legacy Python more or less gently through the door. We understand that some people still require Legacy Python in their code base, or
+that some libraries are only available on Legacy Python. We don't blame them. Legacy Python was a great language and it's hard to move past it.  But Legacy Python is 2020; you have less than 5 years and you will ave to make the transition then. If you wait until then, it will be even harder to
+transition. 
 
-So what are the step we can do to push the transition forward.
+"So," we asked, "what can we do to push the transition forward".
 
 ## Choose your words.
 
-The choice of words you make on the internet and in real life will influence
-the vision people have for Legacy Python vs Python. Assume that Python 3 is
-just Python, and refer to Python 2 as legacy python.  IDEs and TwitterSphere is
-[starting](https://twitter.com/astrofrog/status/646976176657932288) to [do
-that](https://twitter.com/almarklein/status/645542438937980929), join the
+The words you use — on the internet or in real life — influence
+the people's vision of the future. To the extent that self-fulfilling prophecies are agreed to be a real thing, visions of the future determine the future. For the future of a programming language, that live and die by the people who know how to speak it, self-fulfilling prophecies are the modus operandus.
+
+So, we propose  `Legacy Python` vs `Python`. That is, what to this date we have been calling `Python 3`, that is just `Python`. What we've referred to as `Python 2`, we instead suggest calling `Legacy Python`.  If you fear being alone; IDEs and members of the TwitterSphere are already [joining](https://twitter.com/astrofrog/status/646976176657932288) [the](https://twitter.com/almarklein/status/645542438937980929)
 movement.
 
-Refer to Legacy Python in the past tense. It will reinforce the old and
-deprecated state of Legacy Python. I still don't understand why people would
-like to stay with a language which that many defects:
+Beyond that, we have a grammatical suggestion, to Legacy Python in the past tense, in the way that you would speak of a dead relative that you loved dearly. Do so, in the way that one refers to "Shōwa Tennō" rather than "Hirohito" to refer to the emporer of Japan who reigned from 1926–1989. It is a term of respect, but it acknowledges an era whose end has passed. It will remind people that Legacy Python, as valuable as it a mummy or a museum exhibit at best. 
 
-  - it did not protect you from mixing Unicode and bytes,
-  - tripped you with integer division
-  - did not allow you to replace the printing function
-  - had a range object which is not memory efficient
-  - did not permit to re-raise exception
-  - had a bad asynchronous support, without yield from
-  - forced you to repeat the current class in `super()` call.
-  - let you mix tab and space.
-  - did not support function annotations
+Legacy Python, fo rall its worth, had many defects:
 
-Legacy Python was missing many other feature which are now part of Python.
+  - you were free to fail by accidentaly mixing Unicode and bytes,
+  - integer division could easily become a logical trap  (5/4 > 1)
+  - the printing function was locked away (because it was not a function)
+  - range object was inefficient
+  - re-raised exceptions were forbidden
+  - asynchrony was challenging, `yield from` did not exist
+  - `super()` calls required repeating the current class.
+  - tabs and spaces coudl be mixed with abandon.
+  - function annotations were not possible
 
-Do not state what's better in Python 3, state that it was missing/broken in
-Legacy Python.  Like the missing matrix multiplication operator was missing
-multiplication operator. Legacy Python was preventing people to use efficient
-numeric library which are relying on the numerical operator.
+Legacy Python was missing many other features that are part of Python.
+
+Do not state what's better in Python 3; it was missing/broken in
+`Legacy Python`.  Much like the missing matrix multiplication operator was the missing multiplication operator included in `Python 3.5`. `Legacy Python` prevented using efficient numeric libraries relying on the numerical operator.
 
 ## Don't respond to "and on Python 2"
 
-Personally during talks I plan to not pay attention to question regarding
-legacy Python, and will treat questions such questions as someone asking whether
-I support windows Vista. Next question please. The less you talk about Legacy Python
-the more you imply Legacy Python  is not a thing anymore.
+I pose a pledge: 
 
+* During talks I will dismiss question regarding
+`legacy Python`, and will treat questions such questions much as I would if someone asked whether I support Windows Vista. 
 
-## Drop support for Legacy Python (at least on paper)
+> Next question please.  
 
-If you a library author, you have probably had to deal with user trying your
-software on Legacy Python, and spend lot of time making your codebase
-compatible with both Python 3 and legacy Python.  There are a few step you can
-take to push user toward Python 3.
+The less you talk about `Legacy Python`,  the more you imply Legacy Python is not a thing anymore, the less `Legacy Python` continues to exist.
 
-If a user is not willing to update to a new version on Python, and decide to stay on
-legacy Python, they can most likely pin the version on your library to versions which
-support Legacy Python.
+## Drop support for `Legacy Python` (at least on paper)
+
+If you a library author, you have probably had to deal with users trying your
+software on `Legacy Python`, and spend lot of time making your codebase
+compatible with both `Python` and `Legacy Python`.  There are a few steps you can take to push users toward using `Python`.
+
+If a user is not willing to update to `Python`, and decides to handicap themselves with `Legacy Python`, they can most likely pin your library to be the most recent version supporting `Legacy Python`. 
 
 ### Make your examples/documentation Python 3 only
 
@@ -104,81 +96,68 @@ and increase the chances to get examples right.
 ### Ask user to reproduce but on up-to-date Python version.
 
 Have you ever had a bug report where you ask users to upgrade your libraries
-dependencies ? Do the same with Python. If a user make a bug report with Python
-2.7 ask them if they can reproduce with an up-to date version of Python, even
-if the bug is obviously from your side.  If they really can't upgrade they will
-know, if they do and can reproduce, then you'll have at least converted one
-user from Legacy Python (and in the meantime you might have already corrected
-the bug).
+dependencies ? Do the same with Python. If a user make a bug report that discusses `Python 2.7`, ask them if they can reproduce with an "up-to date version of `Python`". Even if the bug is on your side, this will have positive effects. If they really cannot upgrade they will know and will say so to you, at which point you can begin the fix. If they do upgrade and can reproduce the bug, then you'll have at least converted one user from Legacy Python (and in the meantime you might have given yourself more time to correct the bug).
 
 
-### Defer 2.7 support to companies like Continuum
+### Defer `Legacy Python` support to companies like Continuum
 
 This is already what [Nick Coghlan
 recommands](http://www.curiousefficiency.org/posts/2015/04/stop-supporting-python26.html)
-for Python 2.6, and that's what you can do for Legacy Python fix. If you
-have a sufficient number of user which are asking for 2.7 support, accept the
-bug report, but as an open source maintainer do not work on it. You can partner
-with companies like Continuum or Enthought, from which user would "buy" 2.7 support
-for your libraries, in exchange of which the Companies could spend some of their
-developer time fixing your Legacy Python bugs.
+for `Python 2.6`, and that's what you can do for `Legacy Python` fixes. If you
+have a sufficient number of user which are asking for `Legacy Python` support, accept the bug report, but as an open source maintainer do not prioritize work on it. Companies like Continuum or Enthought can work on it, and users can "buy" `Legacy Python` support for your libraries. In exchange of which the Companies could spend some of their developer time fixing `Legacy Python` bugs for your code-base.
 
-After a quick discussion with Peter Wang, it would be possible, but details
-need to be worked on.
+After a quick discussion with Peter Wang, this may be possible. But for now, it is merely a hypothetical suggestion, details need to be worked out.
 
 
-## Make Python 3 attractive
+## Make `Python` (formerly, `Python 3`) even *more* attractive
 
 ### Create new features
 
-Plan you new features explicitly for Python 3, even if the feature would be
-simple to make Legacy Python compatible, disable it on old platforms, and issue
-a warning indicating that the feature is not available on Legacy Python
-install.
-
-You will be able to use all the shiny Python features which are lacking on
-Legacy Python like Unicode characters !
+Plan new features to be `Python` exclusive. Even features would be
+simple to make compatible with `Legacy Python`, disable it on old platforms, or issue a warning indicating that the feature is not available on instlalations of `Legacy Python`. This will mean you are nolonger hamstrung by the requirements of `Legacy Python` — Unicode characters and other `Python` features lacking on Legacy Python will finally be available to you.
 
 ### Create new Python packages
 
-Make new packages Python 3 only, and make all the design decision you didn't do
-on your previous package. Pure python libraries are much easier to create and
-[build](http://flit.readthedocs.org/en/latest/)  once you are not hold back by
-legacy Python.
-
+Make new packages `Python` only. I.e., make them such that they don't need need to support `Legacy Python`. Instead, make all the design decision you didn't do on your previous package for the sake of maintaining compatibility with `Legacy Python`. `Python` libraries are much easier to create and
+[build](http://flit.readthedocs.org/en/latest/)  once you are not held back by
+`Legacy Python`.
 
 ## Helping Other project
 
-Despite all the good will in the world the Migration path from Legacy Python
-can be hard.  There are still a lot of things that can be done to help current
-and new project to push forward the adoption of Python.
+Despite all the good will in the world, migration path from `Legacy Python` to `Python` is still hard. There are still a lot of things that will help current
+and new projects push forward on adopting `Python`.
 
 ### Testing
 
+All of your projects should have tests.
+
+All of your projects should have continuous integration (e.g., [Travis CI](https://travis-ci.org/)).
+
 Make sure that all the project you care about have continuous integration on
-Python 3, if possible even the documentation building done with Python 3, help
-to make Python 3 the default.
+`Python` (include at least `3.3` and `3.4`). Build your documentation with `Python`(not `Legacy Python`). Defaults like this help ensure that Legacy Python dies and that `Python` is the default.
 
 With continuous integration, check that your favorites projects are tested on
-Python Nightly, most CI provider allow the tests to be ran on nightly, but do
-not make the status of the project turn red if the test are failing. See
-[`allow_faillure`](http://docs.travis-ci.com/user/customizing-the-build/#Rows-that-are-Allowed-to-Fail)
-on Travis-CI for example.
+`Python Nightly`(the nightly build of `Python`). Most CI provider allow the tests to be ran on nightly, but let the project fail safely if those tests fail. See
+[`allow_faillure`](http://docs.travis-ci.com/user/customizing-the-build/#Rows-that-are-Allowed-to-Fail) on Travis-CI for example.
 
-### Porting C-extensions, move to Cython
+### Porting `C`-extensions, move to `Cython`
 
-The path to migrate C-extension is not well documented, the preferred approach
+The path to migrate `C`-extensions is not well documented. The preferred approach
 is to use [CFFI](https://cffi.readthedocs.org/en/latest/), but there is still
-alack of well written centralised, document on how to integrate with Python 3.
-IF you are knowledgeable on this domain, your help is welcomed.
+a lack of well-written, centralised documentation on how to integrate with `Python` if a `C`-extension was originally built with `Legacy Python`. If you are knowledgeable in this domain, your help is welcome.
 
 
 ## The things we will (probably) not do.
 
-Make a twitter account that shame people that use Legacy Python, though we
-might do a Parody account which say funny things, and push people toward Python 3.
+### Friendly Haraunging
 
-Slow code on purpose and obviously on Legacy Python:
+We will probbaly not make a twitter account that shame people for using `Legacy Python`. 
+
+We might do a Parody account which says funny things, and push people toward using an up-to-date version of `Python`.
+
+### Mild Lag Mischief
+
+We probably won't slow code on purpose and obviously on Legacy Python:
 
 ```python
 import sys
@@ -187,9 +166,11 @@ if sys.version_info[0] < 3:
     time.sleep(1)
 ```
 
-Though it would be fun.
+Though it would be funny.
 
-Ask user at IDE/CLI startup time if they want to upgrade to Python3:
+### Moderate Interface Clutter
+
+We probably will not ask users that startup a new instance of an IDE or CLI whether they want to upgrade to Python3:
 
 ```bash
 $ python2
@@ -201,21 +182,18 @@ want not to upgrade to a newer version ? [y]:_
 
 ```
 
-Delay Legacy Python packages releases by a few weeks to incentive people to
-migrate, or should we actually consider the people on Python 2 as guinea pig
-and release nightly ?
+
+### Severe Lag Mischief
+
+We probably won't delay `Legacy Python` packages releases by a few weeks to incentivize migration. Though ensuring compatibility with `Legacy Python` when developing on a modern `Python` system slows down development time, and so it would be unsurprising if some delays did occur.
 
 
-# End word
+# Final words
 
-Remember, Legacy Python is responsible for global warming, encourage people to
-stay with IE6, and is voting for Donald Trump.
+If you have any ideas, send me a Pull Request — I'll be happy to discuss. 
 
-If you have any ideas, please send me a Pull Request, I'll be happy to discuss. 
-
-As usual my English is far from perfect, so Pull Request welcomed on this blog
-post. Thanks to @michaelpacer who already did some rereading/rephrasing of
-first draft.
+As usual my English is far from perfect, so Pull Requests are welcomed on this blog post. Thanks to @michaelpacer did some rereading/rephrasing of
+this and the first draft.
 
 
 
