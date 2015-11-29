@@ -22,7 +22,7 @@ intention, by re-reading it I still do not feel it. Maybe this is because I'm
 still not skilled enough with words in English, and this is typically the kind
 of feedback I appreciate.
 
-## don't break user code 
+## Don't break user code
 
 One other thing that seem to leek through my post was the impression I was
 advocating breaking user code. What I am advocating is to make a step
@@ -117,7 +117,7 @@ more than a year ago when it was harder than today. It was not fun nor was I
 convince after a week, but after spending some time with Python 3, I really
 feel impaired when having to go back to Legacy Python.
 
-## just one Python
+## Just one Python
 
 So while not all scientist are seeing the immediate effect of Python 3, I would
 really hope for all the core packages to be able to just forget about Legacy
@@ -210,7 +210,7 @@ Office, successful alternative to it's "Open" sibling.
 Seeing that the Scientific community has already a lack of time and funding, I
 find the chance of this happening slim. 
 
-## Leapfrog.
+## Leapfrog
 
 One of the main pain in the transition to Python 3 is keeping compatibility
 with both Python. Maybe one of the solution that will come up is actually
@@ -229,7 +229,7 @@ development.  More generally, CPython implementation details, do leak into the
 language definitions and make alternative implementation harder.
 
 
-## conversion tools. 
+## Conversion tools
 
 The Julia community dealt with migrating code from Fortran by writing a
 [Fortran-to-julia
@@ -244,7 +244,7 @@ together](https://github.com/davidhalter/jedi/issues/630) is the way forward.
 
 
 
-# step forward. 
+# Step forward
 
 Make Python 3 adoption easier, or make it clearer what is not Python 3
 compatible, both for humans and machine. There are some simple steps that can
