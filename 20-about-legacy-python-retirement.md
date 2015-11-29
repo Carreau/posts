@@ -1,7 +1,7 @@
 <!-- 
 .. title: About Legacy Python retirement
 .. slug: 20-about-legacy-python-retirement
-.. date: 2015-11-29 21:00:00 UTC
+.. date: 2015-11-29 20:00:00 UTC
 .. tags: 
 .. category: 
 .. link: 

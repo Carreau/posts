@@ -56,7 +56,7 @@ after_success:
     echo '================'
     ls 2015/
     echo "should I push?"
-    git push ghpages master:master
+    git push ghpages master:update -f
   else
     echo "Will only deploy docs build to blog from master branch"
   fi
