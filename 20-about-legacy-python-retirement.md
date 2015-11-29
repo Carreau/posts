@@ -1,7 +1,7 @@
 <!-- 
 .. title: About Legacy Python retirement
 .. slug: 20-about-legacy-python-retirement
-.. date: 2015-09-30 14:59:33 UTC
+.. date: 2015-11-29 21:00:00 UTC
 .. tags: 
 .. category: 
 .. link: 
@@ -173,7 +173,7 @@ hidden as it goes into Graduate student and Post-Doc time, who in the end will
 write the software. The Graduate and Post-doc  often lack the best practices of
 a good software engineer which leads to technical dept accumulation.
 
-### Which path forward,
+### Which path forward
 
 The Python Scientific community is still growing. Laboratories are still
 starting to adopt Python. Wether or not it is a good thing, Python 2 will reach
@@ -188,7 +188,7 @@ Python,  in the same way that [Nasa is looking for programmer fluent in 60
 Years-old
 languages](http://www.popularmechanics.com/space/a17991/voyager-1-voyager-2-retiring-engineer/)
 
-# Alternatives.
+# Alternatives
 
 ## Reviving Python 2.7
 
