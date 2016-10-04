@@ -1,1 +1,7 @@
 .*.un~
+*.c
+*.o
+src/
+target/
+Cargo.*
+*.so
