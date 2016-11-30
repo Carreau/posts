@@ -6,7 +6,8 @@ matrix:
     - python: 3.4
 
 install:
-  - pip install jupyter nikola markdown
+  - pip install setuptools --upgrade
+  - pip install jupyter nikola markdown 
 
 
 script:
