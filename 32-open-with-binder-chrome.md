@@ -37,7 +37,7 @@ Please rate the extension, or it may not appear in search results for others AFA
 install Open with Binder for chrome](https://chrome.google.com/webstore/detail/open-with-binder/napgohblobncpnagnehjpooinnimhpkc)
 
 It works identically to the Firefox one, you get a button on the toolbar and
-click on ti when visiting.
+click on it when visiting GitHub.
 
 Enjoy. 
 
