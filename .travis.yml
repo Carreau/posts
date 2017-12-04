@@ -17,6 +17,9 @@ script:
   - cd ..
   - git clone https://github.com/Carreau/nikola-blog blog
   - git clone https://github.com/Carreau/carreau.github.io blog/output
+  - cd output
+  - rm -rf assets/ 20* posts/* index*
+  - cd - 
   - ln -s ../posts blog/posts
   - cd blog
   - pwd
