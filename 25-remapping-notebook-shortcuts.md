@@ -25,21 +25,19 @@ shortcut.
 Use the following in your `~/.jupyter/custom/custom.js` :
 
 
-```javascript
-require(['base/js/namespace'], function(Jupyter){
-  // we might want to but that in a callback on wait for 
-  // en even telling us the ntebook is ready.
-  console.log('== remaping command palette shortcut ==')
-  // note that meta is the command key on mac.
-  var source_sht = 'meta-shift-p'
-  var target_sht = 'meta-/'
-  var cmd_shortcuts = Jupyter.keyboard_manager.command_shortcuts;
-  var action_name = cmd_shortcuts.get_shortcut(source_sht)
-  cmd_shortcuts.add_shortcut(target_sht, action_name)
-  cmd_shortcuts.remove_shortcut(source_sht)
-  console.log('== ', action_name, 'remaped from', source_sht, 'to', target_sht )
-})
-```
+    require(['base/js/namespace'], function(Jupyter){
+      // we might want to but that in a callback on wait for 
+      // en even telling us the ntebook is ready.
+      console.log('== remaping command palette shortcut ==')
+      // note that meta is the command key on mac.
+      var source_sht = 'meta-shift-p'
+      var target_sht = 'meta-/'
+      var cmd_shortcuts = Jupyter.keyboard_manager.command_shortcuts;
+      var action_name = cmd_shortcuts.get_shortcut(source_sht)
+      cmd_shortcuts.add_shortcut(target_sht, action_name)
+      cmd_shortcuts.remove_shortcut(source_sht)
+      console.log('== ', action_name, 'remaped from', source_sht, 'to', target_sht )
+    })
 
 ## details
 
