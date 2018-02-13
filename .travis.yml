@@ -25,6 +25,7 @@ script:
   - pwd
   - ls -la posts
   - nikola build
+  - cp posts/CNAME output/
 
 after_success:
   |
