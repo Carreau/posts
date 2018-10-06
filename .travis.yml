@@ -24,6 +24,7 @@ script:
   - cd blog
   - pwd
   - ls -la posts
+  - rm posts/requirements.txt
   - nikola build
 
 after_success:
