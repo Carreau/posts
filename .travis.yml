@@ -26,6 +26,9 @@ script:
   - ls -la posts
   - rm posts/requirements.txt
   - nikola build
+  - mkdir -p output/posts/img
+  - cp posts/img/*.png output/posts/img/
+  - cp posts/img/*.gif output/posts/img/
   - python norm.py
 
 after_success:
