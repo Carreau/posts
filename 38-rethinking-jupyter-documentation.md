@@ -23,7 +23,7 @@ session.
 
 The current documentation of IPython and Jupyter come in a few forms, but mostly
 have the same limitation. 
-The typical way to reach for help is to use the `?` operator. Depending on the
+The typical way to reach for help is to use the `?` operator. Depending on
 the frontend you are using it will bring a pager, or a panel that will display
 some information about the current object. Here is the documentation for
 ``numpy.linspace``
@@ -31,28 +31,28 @@ some information about the current object. Here is the documentation for
 ![numpy.linspace help in IPython](../img/numpy-linspace-current.png)
 
 It can show some information about the current object (signature, file,
-sub/super classes) and the raw docstring of the object. 
+sub/super classes) and the raw DocString of the object. 
 
-You can scroll around but that's about it; in terminal or Notebooks.
+You can scroll around but that's about it wether in terminal or Notebooks.
 
-Compare it to the numpy website:
+Compare it to the same documentation on the numpy website:
 
 ![numpy.linspace on numpy.org](../img/numpy-linspace-website.png)
 
-Compared to online documentation jupyter documentation is:
+Compared to online documentation viewed from within jupyter, the documentation is:
  - Hard to read, 
  - Has no navigation
  - RST Directives have not been interpreted.
- - No inline graph or rendered math.
+ - No inline graph , rendered rendered math.
 
-There is no access to non-docstring based documentation, narrative, tutorials or
-image gallery, no search, no syntax highlighting, no way to interact or modify
-documentation to test effects.
+There is also no access to non-docstring based documentation, like narrative,
+tutorials, image gallery or examples, no search, no syntax highlighting, no way to
+interact or modify documentation to test effects of parameters.
 
 # Limitation for authors
 
-Due to Jupyter and IPython limitations authors are often contained to document
-functions.
+Due to Jupyter and IPython limitations to display documentation I believe
+authors are often contained to document functions.
 
 Syntax in docstrings is often kept simple for readability, this first version is
 often preferred:
@@ -78,6 +78,12 @@ matplotlib source for `_kwdoc` , or pandas DataFrame for example.
 This can make it relatively difficult for authors and contributors to properly
 maintain and provide comprehensive docs.
 
+I'm not sure I can completely predict all effects this has on how library
+maintainers write docs; but I believe there is also a strong opportunity for a
+tools to help there. See for example [vélin](https://github.com/Carreau/velin)
+which attempts to auto reformat and fix common NumyDoc's format mistakes and
+typos.
+
 # Stuck between a Rock and a Hard place
 
 While Sphinx and related project are great at offering hosted HTML
@@ -98,29 +104,31 @@ platform or version specific features.
 
 For the past few month I've been working on rewriting how IPython (and hence
 Jupyter) can display documentation. It works both in terminal and html context
-with proper rendering, and currently understand most directive; and could be
-customize to understand any new ones:
+with proper rendering, and currently understand most directives; and could be
+customized to understand any new ones:
 
 ![papyri1](../img/papyri-1.png)
 
 Above is the (terminal) documentation of `scipy.polynomial.lagfit`, see how the
-single backticks are properly understood and refer to known parameter, and ``
-`n` `` is incorrect as it should have double backticks; notice the rendering of
-the math even in terminal. For that matter technically this does not care as to
-whether the DocString is written in RST or Markdown; though I need to implement
-the later part.
+single backticks are properly understood and refer to known parameters, it
+detected that  `` `n` `` is incorrect as it should have double backticks; notice
+the rendering of the math even in terminal.
+
+For that matter technically this does not care as to whether the DocString is
+written in RST or Markdown; though I need to implement the later part. I belive
+though that some maintainers would be quite
 
 ![papyri navigation](../img/papyri-nav.gif)
 
 It support navigation – here in terminal – where clicking or pressing enter on a
 link would bring you to the target page. In above gif you can see that many
-token of code example are automatically type inferred (thanks Jedi), and are also
-clickable to o to their corresponding page.
+token of code example are also automatically type-inferred (thanks Jedi), and
+can also be clicked to navigate to their corresponding page.
 
 ![papyri terminal-fig](../img/papyri-terminal-fig.png)
 
 Images are included, even in terminal when they are not inline but replaced by
-a button to open then in your preferred viewer.
+a button to open them in your preferred viewer.
 
 
 I'm working on a number of other features, in particular :
@@ -145,6 +153,16 @@ crash in many places, so I'm not going to link to it here yet;
 
 I though encourage you to think about what features you are missing when using
 documentation from withing Jupyter and let me know.
+
+For now I've submitted a [Letter of intent to CZI EOSS
+4](https://docs.google.com/document/d/1hk-Ww7pUwnoHINNhDeP9UOPvNEemAFe-pohK5dCtZPs/edit?usp=sharing)
+in an attempt to get some of that work funded to land in IPython, and if you
+have any interest in contributing or want something like that for your library,
+feel free to reach out. 
+
+I'll make the repository public in I hope a near future; right now it is too
+unstable and with too many hard coded path to be useful, but once it is in a
+more stable, and better documented [sic] for public feedback.
 
 
 
