@@ -1,0 +1,43 @@
+name: Python Package using Conda
+
+on: [push]
+
+jobs:
+  build-linux:
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 5
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.8
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+    - name: Add conda to system path
+      run: |
+        # $CONDA is an environment variable pointing to the root of the miniconda directory
+        echo $CONDA/bin >> $GITHUB_PATH
+    - name: build
+      run: |
+          pip install setuptools pip --upgrade
+          pip install jupyter nikola markdown
+          git config --global user.email "TravisBot@nomail"
+          git config --global user.name "TravisBot"
+          git config --global push.default simple
+          cd ..
+          git clone https://github.com/Carreau/nikola-blog blog
+          git clone https://github.com/Carreau/carreau.github.io blog/output
+          cd blog/output
+          rm -rf assets/ 20* posts/ index* pages/ categories/ archive.html
+          cd ../..
+          ln -s ../posts blog/posts
+          cd blog
+          pwd
+          ls -la posts
+          rm posts/requirements.txt
+          nikola build
+          mkdir -p output/posts/img
+          cp posts/img/*.png output/posts/img/
+          cp posts/img/*.gif output/posts/img/
+          python norm.py
